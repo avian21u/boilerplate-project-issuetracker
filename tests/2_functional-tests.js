@@ -130,7 +130,7 @@ suite('Functional Tests', function() {
       chai.request(server)
       .put('/api/issues/apitest')
       .send({
-        _id: "60c2e5a0a1158f0dc14c2930",
+        _id: "60c2e9c36aa472121e5f2b78",
         issue_title: 'chai test 2'
       })
        .end(function(err, res) {
@@ -143,7 +143,7 @@ suite('Functional Tests', function() {
       chai.request(server)
       .put('/api/issues/apitest')
       .send({
-        _id: "60c2e5a0a1158f0dc14c2930",
+        _id: "60c2e9c36aa472121e5f2b78",
         issue_title: 'chai test 2',
         issue_text: 'chai test 2',
         created_by: 'chai test 2'
@@ -173,12 +173,12 @@ suite('Functional Tests', function() {
       chai.request(server)
       .put('/api/issues/apitest')
       .send({
-        _id: "60c2e5a0a1158f0dc14c2930"
+        _id: "60c2e9c36aa472121e5f2b78"
       })
        .end(function(err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.body.error,'no update field(s) sent');
-          assert.equal(res.body._id, "60c2e5a0a1158f0dc14c2930");
+          assert.equal(res.body._id, "60c2e9c36aa472121e5f2b78");
           done();
       })   
     });
@@ -207,12 +207,12 @@ suite('Functional Tests', function() {
       chai.request(server)      
       .delete('/api/issues/apitest')
       .send({
-        _id: '60c2e5a0a1158f0dc14c2930'
+        _id: '60c2e9ea6aa472121e5f2b79'
       })
        .end(function(err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.body.result,"successfully deleted");
-          assert.equal(res.body._id, '60c2e5a0a1158f0dc14c2930');
+          assert.equal(res.body._id, '60c2e9ea6aa472121e5f2b79');
           done();
       })   
     });
