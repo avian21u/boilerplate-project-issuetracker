@@ -100,8 +100,6 @@ module.exports = function (app) {
           return err;
         };
         
-        console.log(req.body);
-        
         // When the PUT request sent to /api/issues/{projectname} does not include update fields, 
         // the return value is { error: 'no update field(s) sent', '_id': _id }.
         if ( (!req.body.issue_title || req.body.issue_title.trim() === "") && (!req.body.issue_text|| req.body.issue_text.trim() === "") 
